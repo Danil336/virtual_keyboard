@@ -1,0 +1,123 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+.wrapper{
+	text-align: center;
+}
+.keys{
+    background-color: rgb(121, 115, 234);
+	border: 2px solid rgb(10, 68, 126);
+    min-width: 66px;
+    min-height: 45px;
+    font-size: 20px;
+    border-radius: 5px;
+	color: rgb(5, 61, 42);
+	transition: .2s;
+}
+.keys:hover{
+	background-color: rgb(74, 67, 218);
+	border: 2px solid rgb(50, 137, 223);
+	color: rgb(69, 164, 132);
+}
+.keys:active{
+	background-color: rgb(50, 47, 139);
+	border: 2px solid rgb(50, 137, 223);
+	color: rgb(69, 164, 132);
+}
+.keyboard{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 1040px;
+    gap: 5px;
+	border: 3px solid rgb(41, 41, 58);
+    border-radius: 5px;
+	padding: 20px 20px 20px 20px;
+}
+.input{
+	font-size: 20px;
+	padding: 0 20px 220px 20px;
+	margin: 20px 0 40px 0;
+	width: 800px;
+	height: 300px;
+	border: 2px solid brown;
+}
+.gEnter{
+	min-width: 118px;
+}
+.gSpace{
+	min-width: 300px;
+}
+.gDelete{
+	width: 40px;
+}
+.gControlLeft{
+	width: 55px;
+}
+.gShiftL, .gShiftR{
+	width: 137px;
+}
+.qq{
+	min-width: 46px;
+}
+.gDel{
+	min-width: 45px;
+}
+.active{
+	background-color: rgb(50, 47, 139);
+	border: 2px solid rgb(50, 137, 223);
+	color: rgb(69, 164, 132);
+}
+
+/* .remove {
+	background-color: rgb(121, 115, 234);
+	border: 2px solid rgb(10, 68, 126);
+	color: rgb(5, 61, 42);
+    animation: 0.5s forwards ;
+} */
+/* .keys.remove {
+    animation: keys_animation 0.5s forwards ;
+}
+
+@keyframes keys_animation {
+    0% {
+        background-color: #333;
+        color: #fff;
+    }
+    100% {
+        background-color: #fff;
+        color: #000;
+    }
+} */
