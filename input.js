@@ -2,29 +2,23 @@
 
 
 keyboard.addEventListener('click', event => {
-    console.log(event.target.getAttribute('data-keyname').length)
     for(let key of keyboard.children){
         if(key.getAttribute('data-keyname').length < 3 && key == event.target){
-            input.value += key.getAttribute('data-keyname')
-
+            input.value += key.innerText
         }
-
     }
 })
 
 document.addEventListener('keydown', event => {
     if(event.code == 'Space'){
-        input.value += ' '
+        input.value += ' ';
     }
     else if(event.key.length < 3){
-    const pressedKey = document.querySelector(`.g${event.key}`)
+        const pressedKey = document.querySelector(`.g${event.key.toLowerCase().charCodeAt(0)}`);
+        input.value += pressedKey.innerText
+    } else if(`g${event.key}` in specialInputKeys){ 
+        input.value += specialInputKeys[`g${event.key}`];
+    } else {
 
-    
-    
-      
-    input.value += pressedKey.getAttribute('data-keyname')
-
-    console.log(event.code)
-    // console.log(`g${event.key}`)
-}
+    }
 })
