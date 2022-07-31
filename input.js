@@ -1,5 +1,4 @@
-
-
+let isShiftActive = false
 
 keyboard.addEventListener('click', event => {
     for(let key of keyboard.children){
@@ -17,11 +16,12 @@ document.addEventListener('keydown', event => {
         
     }
     else if(event.key.length < 3){
-    const pressedKey = document.querySelector(`.g${event.key.toLowerCase().charCodeAt(0)}`);
-
-    input.value += pressedKey.innerText
-
-    console.log(event.code)
+        if(isShiftActive) {
+            input.value += document.querySelector(`[data-shift-keyname="${event.key}"]`).getAttribute('data-shift-keyname')
+        } else {
+            const pressedKey = document.querySelector(`.g${event.key.toLowerCase().charCodeAt(0)}`) ;
+            input.value += pressedKey.innerText
+        }
     } else if(`g${event.key}` in specialInputKeys){
         input.value += specialInputKeys[`g${event.key}`];
     } 

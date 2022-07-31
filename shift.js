@@ -1,6 +1,7 @@
-let isShiftActive = false
+
 function toShift(boolean, attribute) {
     isShiftActive = boolean;
+
     for(let key of keyboard.children){
         if(key.innerText.length < 3){
             if(key.innerText === key.innerText.toUpperCase()) {
