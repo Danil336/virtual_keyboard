@@ -40,7 +40,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background-color: rgb(121, 115, 234);
 	border: 2px solid rgb(10, 68, 126);
     min-width: 66px;
-    min-height: 45px;
+    min-height: 50px;
     font-size: 20px;
     border-radius: 5px;
 	color: rgb(5, 61, 42);
@@ -68,7 +68,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 .input{
 	font-size: 20px;
-	padding: 0 20px 220px 20px;
+	padding: 20px 20px 220px 20px;
 	margin: 20px 0 40px 0;
 	width: 800px;
 	height: 300px;
@@ -89,9 +89,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .gShiftL, .gShiftR{
 	width: 137px;
 }
-.qq{
+.keys:first-child{
 	min-width: 46px;
 }
+
 .gDel{
 	min-width: 45px;
 }
