@@ -17,27 +17,25 @@ function toShift(boolean, attribute) {
 }
 
 
-
 document.addEventListener('keydown', event => {
-    if(event.key === 'Shift' && !isShiftActive === true && isEnglish === true){
-        toShift(true, 'data-shift-keyname')
-        
+    if(event.key === 'Shift' && !isShiftActive === true && isEnglish === false){
+        toShift(true, 'data-shift-lang')
     }
 })
 document.addEventListener('keyup', event => {
-    if(event.key === 'Shift' && isEnglish === true){
-        toShift(false, 'data-keyname')
+    if(event.key === 'Shift' && isEnglish === false){
+        toShift(false, 'data-lang')
     }
 })
 document.addEventListener('mousedown', (event) => {
-    if((event.target.innerText === 'ShiftR' || event.target.innerText === 'ShiftL') && !isShiftActive === !false && isEnglish === true){
-        toShift(true, 'data-shift-keyname')
+    if((event.target.innerText === 'ShiftR' || event.target.innerText === 'ShiftL') && !isShiftActive === !false && isEnglish === false){
+        toShift(true, 'data-shift-lang')
     }
 });
 
 document.addEventListener('mouseup', (event) => {
     console.log(!isShiftActive === true);
-    if(event.target.innerText === 'ShiftR' || event.target.innerText === 'ShiftL' && isEnglish === true){
-        toShift(false, 'data-keyname');
+    if(event.target.innerText === 'ShiftR' || event.target.innerText === 'ShiftL' && isEnglish === false){
+        toShift(false, 'data-lang');
     }
 })

@@ -1,5 +1,7 @@
 const caps = document.querySelector('.gCapsLock')
+let isCaps = false;
 function capsLock() {
+    isCaps = true;
     for(let key of keyboard.children){
         if(key.innerText.length < 3){
             if(key.innerText === key.innerText.toUpperCase()){
@@ -10,15 +12,22 @@ function capsLock() {
         }
     }
 }
+
 document.addEventListener('keydown', event => {
-    if(event.key === 'CapsLock'){
-        capsLock()
-        caps.classList.toggle('active')
+    if(event.key === 'CapsLock' && !isCaps === true){
+        capsLock();
+        caps.classList.toggle('active');
     }
 });
+document.addEventListener('keyup', event => {
+    if(event.key === 'CapsLock'){
+        isCaps = false;
+    }
+});
+
 document.addEventListener('click', event => {
     if(event.target.innerText === 'CapsLock'){
-        capsLock()
-        caps.classList.toggle('active') 
+        capsLock();
+        caps.classList.toggle('active');
     }
 });
